@@ -26,4 +26,21 @@
         Identificador del Uruk-hai
     </string>
 
+    <string name="error_id_vacio">
+        El ejercito no acepta soldados anonimos
+    </string>
+
+    <string name="toast_enviada">
+        ¡Unidad %1$s enviada al Abismo de Helm!
+    </string>
+
+    <string-array name="tipos_unidad">
+
+        <item>@string/guerrero</item>
+        <item>@string/arquero</item>
+        <item>@string/explorador</item>
+        <item>@string/berserker</item>
+
+    </string-array>
+
 </resources>
