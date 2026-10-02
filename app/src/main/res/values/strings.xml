@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ExamenUT2</string>
+
+    <string name="tipo_unidad">
+        Tipo de unidad
+    </string>
+
+    <string name="guerrero">Guerrero</string>
+    <string name="arquero">Arquero</string>
+    <string name="explorador">Explorador</string>
+    <string name="berserker">Berserker</string>
+
+    <string name="armadura_hierro">
+        Armadura de Hierro
+    </string>
+
+    <string name="escudo_isengard">
+        Escudo de Isengard
+    </string>
+
+    <string name="antorcha">
+        Llevar Antorcha de Polvorín
+    </string>
+
+    <string name="identificador_hint">
+        Identificador del Uruk-hai
+    </string>
+
+</resources>
