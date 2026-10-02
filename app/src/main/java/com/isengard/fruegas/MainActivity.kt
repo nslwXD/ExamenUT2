@@ -175,4 +175,34 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+
+        // guardamos el estado completo del formulario antes de un cambio de configuracion
+        outState.putString(
+            KEY_ID,
+            etIdentificador.text.toString()
+        )
+
+        outState.putInt(
+            KEY_TIPO,
+            spinnerTipo.selectedItemPosition
+        )
+
+        outState.putInt(
+            KEY_RADIO,
+            radioProteccion.checkedRadioButtonId
+        )
+
+        outState.putBoolean(
+            KEY_ANTORCHA,
+            checkAntorcha.isChecked
+        )
+
+        outState.putString(
+            KEY_ERROR,
+            etIdentificador.error?.toString()
+        )
+
+        super.onSaveInstanceState(outState)
+    }
 }

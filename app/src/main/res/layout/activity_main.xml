@@ -11,82 +11,75 @@
         android:id="@+id/identificador"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:hint="@string/identificador_hint"
         android:inputType="text"
         android:maxLines="1"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinnerTipo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/tipo_unidad"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="269dp"
-        tools:ignore="MissingConstraints" />
-
-    <RadioGroup
-        android:id="@+id/radioProteccion"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
-
-    </RadioGroup>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
         android:id="@+id/checkAntorcha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/antorcha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@id/identificador"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="160dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerTipo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/tipo_unidad"
+        app:layout_constraintTop_toBottomOf="@id/checkAntorcha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
         android:id="@+id/btnEnviar"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="40dp"
         android:padding="12dp"
         android:src="@android:drawable/ic_menu_send"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:contentDescription="Enviar"
+        app:layout_constraintTop_toBottomOf="@id/spinnerTipo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkAntorcha"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <RadioButton
-        android:id="@+id/radioEscudo"
+    <RadioGroup
+        android:id="@+id/radioProteccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/escudo_isengard"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="526dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/btnEnviar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <RadioButton
-        android:id="@+id/radioArmadura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/armadura_hierro"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="444dp"
-        tools:ignore="MissingConstraints" />
+        <RadioButton
+            android:id="@+id/radioArmadura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/armadura_hierro" />
 
+        <RadioButton
+            android:id="@+id/radioEscudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/escudo_isengard" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
